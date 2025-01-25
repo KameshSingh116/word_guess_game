@@ -11,5 +11,5 @@ word=random.choice(words)
 
 print(f"{name} start guessing")
 
-guesses=''
-turns=10
+guess=''
+turns=3
