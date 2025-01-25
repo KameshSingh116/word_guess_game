@@ -6,15 +6,7 @@ print(f"Let's Go {name}")
 words = ['rainbow', 'computer', 'water', 'programming',
          'python']
 
-word=random.choice(words)
 
-print(f"{name} start guessing")
-
-guess=''
-turns=3
-size=len(word)
-print("...HINT...")
-hint=print(f"The word has {size} characters!")
 
 #word => rainbow
 q=['A natural phenomenon caused by light refraction and dispersion.',
@@ -41,23 +33,34 @@ t=['A high-level programming language known for simplicity.',
    'Named after a British comedy group, not the snake.',
    'Used in web development, data science, and AI.']
 
-if word=='rainbow':
-        print(random.choice(q)) 
-
-elif word=='computer':
-        print(random.choice(w))
-
-elif word=='water':
-        print(random.choice(e))
-
-elif word=='programming':
-        print(random.choice(r))  
-
-elif word=='python':
-        print(random.choice(t))
 
 choice='y'
 while(choice=='y'):
+        word=random.choice(words)
+
+        print(f"{name} start guessing")
+       
+        guess=''
+        turns=3
+        size=len(word)
+        print("...HINT...")
+        hint=print(f"The word has {size} characters!")
+
+        if word=='rainbow':
+           print(random.choice(q)) 
+
+        elif word=='computer':
+           print(random.choice(w))
+
+        elif word=='water':
+           print(random.choice(e))
+
+        elif word=='programming':
+           print(random.choice(r))  
+
+        elif word=='python':
+           print(random.choice(t))
+
         while(turns>0):
           guess=input("Your guess:")
           if word==guess:
